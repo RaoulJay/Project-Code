@@ -14,12 +14,12 @@ def scene1():
     while (ans == 'incorrect'):
         if (c1.upper() == "GREET"):
             print(
-                "\n The two strangers are two tall wiry humanoids clad in tattered leather armour. "
-                "Hobgoblins! You draw your sword to attack! But you are too slow and your head is cleaved in two."
+                "\n The two strangers are two tall wiry humanoids clad in tattered leather armour. Hobgoblins! "
+                "You draw your sword to attack, but unfortunately, you are too slow, and your head is cleaved in twain."
                 " You die. ")
             ans = 'correct'
         elif (c1.upper() == "HIDE"):
-            print("Two pairs of wirey legs shuffle past, and the voices fade into the distance. "
+            print("Two pairs of wiry legs shuffle past, and the voices fade into the distance. "
                   "You step back onto the path and continue north, away from the strangers")
             ans = 'correct'
             scene2()
@@ -30,7 +30,7 @@ def scene1():
 def scene2():
     import time
     print("""
-            On the main path you come across a large hole by the side of the road. 
+            You soon come across a large hole by the side of the road. 
             Peering in, you see it slopes down into the earth. 
             Do you investigate the hole, or walk on down the road?
 
@@ -43,37 +43,109 @@ def scene2():
     while (ans == 'incorrect'):
         if (c1.upper() == "INVESTIGATE"):
             print(
-                """\nThe moment Lily picked up the the teddy bear. The Teddy bear starts TALKING!The bear tells Lily that she is in grave danger as there is a monster in the house.And the monster has captured her PARENTS as well!But he hugged her and told her not to get scared as he knows how to beat the moster!""")
+                """\nThe hole slopes down into the dark...""")
             time.sleep(2)
             print(
-                """\nThe bear handed lily a magical potion which can weaken the moster and make him run away!He handed her the potion and then DISAPPEARED!Lily moved forward.""")
+                """\nThe sides of the hole are covered in slime...what is this? 
+                Suddenly you enter a large cavern, and in that cavern is a Giant Sting Wyrm! 
+                You disturbed its sleep and now it is mad. You turn to run, but slip on the slime-covered floor
+                ...you feel a sharp sting in the back of your head, 
+                and everything goes black. You never awake.""")
             ans = 'correct'
             pick = "True"
         elif (c1.upper() == 'WALK'):
-            print("""\nLily decided not to pick up the bear and walked forward.""")
+            print("""\nWalking further in the dimming light of day you hear 
+            a strange noise growing louder, and louder...You turn around to see a dark mass swirling in the air...
+            For a moment you can't figure out what it is, then you realise with a start: Killer Bees!""")
             ans = 'correct'
             pick = "False"
         else:
             print("Wrong Input! Enter investigate or walk")
             c1 = input()
     time.sleep(2)
-    scene3(pick)
+    scene3()
 
-def scene3(pick_value):
+def scene3():
     import time
-    print("""\n\nAfter walking for a while, Lily saw the MONSTOR in front of her!
-    It had red eyes and evil looks. She got very scared! """)
-    time.sleep(2)
-    if(pick_value=="True"):
-        time.sleep(2)
-        print("""But then she remembered! She had the magic portion and she threw it on the moster!
-              Well she had nothing to lose!""")
-        time.sleep(2)
-        print("\n The monster SCREAMED in pain but he managed to make a portal and pushed Lily to a new world!")
-    elif(pick_value=="False"):
-        print("The monster attacked Lily and hurt her! She was then thrown to the new world by the monster!")
+    print("""
+            The Killer Bees swarm closer by the second...You know you have to escape, 
+            but you are not sure you can outrun the swarm.
+            Looking around frantically you see a large tree with low-hanging branches.
+            
+            Do you Run or Climb the tree?
 
+            Type your choice: Run or Climb?
+
+            """)
+    time.sleep(2)
+    c1 = input()
+    ans = 'incorrect'
+    while (ans == 'incorrect'):
+        if (c1.upper() == "RUN"):
+            print(
+                """\nSprinting off the road you hear water rushing ahead of you. Without thinking you speed 
+                towards the sound. You burst free of the treeline and taking a deep breath, 
+                dive straight into a rushing river.""")
+            time.sleep(2)
+            print(
+                """\nYou hold your breath as long as you can while the river carries you away upstream. 
+                When you surface, the Killer Bees are gone, but now you're stuck in the river's current.""")
+            time.sleep(2)
+            print(
+                """\nFloating as best you can the river eventually slows and you find yourself in a small lake. 
+                You slosh to the shoreline and look around.""")
+            ans = 'correct'
+            pick = "True"
+        elif (c1.upper() == 'CLIMB'):
+            print("""\nHeart pounding in your chest you grab the lowest branch and haul yourself up, 
+            then grab the next branch and pull...crack! The branch under your feet snaps and you tumble to the ground.
+            You're ankle is broken, and through tears in your eyes you see the swarm overtake you...
+            After hundreds of stabbing pins, you drift into unconsciousness, never to awake. """)
+            ans = 'correct'
+            pick = "False"
+        else:
+            print("Wrong Input! Enter Run or Climb")
+            c1 = input()
+    time.sleep(2)
+    scene4()
+
+def scene4():
+    import time
+    print("""
+            
+
+            Type your choice: X or Y?
+
+            """)
+    time.sleep(2)
+    c1 = input()
+    ans = 'incorrect'
+    while (ans == 'incorrect'):
+        if (c1.upper() == "X"):
+            print(
+                """\nThe hole slopes down into the dark...""")
+            time.sleep(2)
+            print(
+                """\nThe sides of the hole are covered in slime...what is this? 
+                Suddenly you enter a large cavern, and in that cavern is a Giant Sting Wyrm! 
+                You disturbed its sleep and now it is mad. You turn to run, but slip on the slime-covered floor
+                ...you feel a sharp sting in the back of your head, 
+                and everything goes black. You never awake.""")
+            ans = 'correct'
+            pick = "True"
+        elif (c1.upper() == 'Y'):
+            print("""\nWalking further in the dimming light of day you hear 
+            a strange noise growing louder, and louder...You turn around to see a dark mass swirling in the air...
+            For a moment you can't figure out what it is, then you realise with a start: Killer Bees!""")
+            ans = 'correct'
+            pick = "False"
+        else:
+            print("Wrong Input! Enter investigate or walk")
+            c1 = input()
+    time.sleep(2)
+    scene5()
 scene1()
 print("\n\n")
 print("=================================END OF CHAPTER 1=================================")
+
 
