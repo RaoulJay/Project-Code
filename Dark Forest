@@ -1,0 +1,79 @@
+def scene1():
+    import time
+    print("""        
+
+        You wake up on the side of an old road in a dark forest...You have no memory of how you got here.
+        You hear footsteps and voices approaching. Do you greet the strangers, or hide in the bushes?
+
+        Type your choice: Greet or Hide?
+    """)
+
+    c1 = input()
+    time.sleep(2)
+    ans = 'incorrect'
+    while (ans == 'incorrect'):
+        if (c1.upper() == "GREET"):
+            print(
+                "\n The two strangers are two tall wiry humanoids clad in tattered leather armour. "
+                "Hobgoblins! You draw your sword to attack! But you are too slow and your head is cleaved in two."
+                " You die. ")
+            ans = 'correct'
+        elif (c1.upper() == "HIDE"):
+            print("Two pairs of wirey legs shuffle past, and the voices fade into the distance. "
+                  "You step back onto the path and continue north, away from the strangers")
+            ans = 'correct'
+            scene2()
+        else:
+            print("ENTER THE CORRECT CHOICE! Greet or Hide?")
+            c1 = input()
+
+def scene2():
+    import time
+    print("""
+            On the main path you come across a large hole by the side of the road. 
+            Peering in, you see it slopes down into the earth. 
+            Do you investigate the hole, or walk on down the road?
+
+            Type your choice: Investigate or Walk?
+
+            """)
+    time.sleep(2)
+    c1 = input()
+    ans = 'incorrect'
+    while (ans == 'incorrect'):
+        if (c1.upper() == "INVESTIGATE"):
+            print(
+                """\nThe moment Lily picked up the the teddy bear. The Teddy bear starts TALKING!The bear tells Lily that she is in grave danger as there is a monster in the house.And the monster has captured her PARENTS as well!But he hugged her and told her not to get scared as he knows how to beat the moster!""")
+            time.sleep(2)
+            print(
+                """\nThe bear handed lily a magical potion which can weaken the moster and make him run away!He handed her the potion and then DISAPPEARED!Lily moved forward.""")
+            ans = 'correct'
+            pick = "True"
+        elif (c1.upper() == 'WALK'):
+            print("""\nLily decided not to pick up the bear and walked forward.""")
+            ans = 'correct'
+            pick = "False"
+        else:
+            print("Wrong Input! Enter investigate or walk")
+            c1 = input()
+    time.sleep(2)
+    scene3(pick)
+
+def scene3(pick_value):
+    import time
+    print("""\n\nAfter walking for a while, Lily saw the MONSTOR in front of her!
+    It had red eyes and evil looks. She got very scared! """)
+    time.sleep(2)
+    if(pick_value=="True"):
+        time.sleep(2)
+        print("""But then she remembered! She had the magic portion and she threw it on the moster!
+              Well she had nothing to lose!""")
+        time.sleep(2)
+        print("\n The monster SCREAMED in pain but he managed to make a portal and pushed Lily to a new world!")
+    elif(pick_value=="False"):
+        print("The monster attacked Lily and hurt her! She was then thrown to the new world by the monster!")
+
+scene1()
+print("\n\n")
+print("=================================END OF CHAPTER 1=================================")
+
