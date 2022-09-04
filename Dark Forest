@@ -1,3 +1,6 @@
+print("\n\n")
+print("=================================The Dark Forest=================================")
+
 def scene1():
     import time
     print("""        
@@ -114,38 +117,32 @@ def scene4():
     print("""
             
 
-            Type your choice: X or Y?
+            Type your choice: Bridge or Cavern?
 
             """)
     time.sleep(2)
     c1 = input()
     ans = 'incorrect'
     while (ans == 'incorrect'):
-        if (c1.upper() == "X"):
+        if (c1.upper() == "BRIDGE"):
             print(
-                """\nThe hole slopes down into the dark...""")
+                """\nBridge...""")
             time.sleep(2)
             print(
-                """\nThe sides of the hole are covered in slime...what is this? 
-                Suddenly you enter a large cavern, and in that cavern is a Giant Sting Wyrm! 
-                You disturbed its sleep and now it is mad. You turn to run, but slip on the slime-covered floor
-                ...you feel a sharp sting in the back of your head, 
-                and everything goes black. You never awake.""")
+                """\n""")
             ans = 'correct'
             pick = "True"
-        elif (c1.upper() == 'Y'):
-            print("""\nWalking further in the dimming light of day you hear 
-            a strange noise growing louder, and louder...You turn around to see a dark mass swirling in the air...
-            For a moment you can't figure out what it is, then you realise with a start: Killer Bees!""")
+        elif (c1.upper() == 'CAVERN'):
+            print("""\nCavern...""")
             ans = 'correct'
             pick = "False"
         else:
-            print("Wrong Input! Enter investigate or walk")
+            print("Wrong Input! Enter Bridge or Cavern")
             c1 = input()
     time.sleep(2)
     scene5()
-scene1()
-print("\n\n")
-print("=================================END OF CHAPTER 1=================================")
 
+
+
+scene1()
 
