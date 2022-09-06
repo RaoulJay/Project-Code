@@ -114,10 +114,13 @@ def scene3():
 
 def scene4():
     import time
-    print("""
-            
+    print("""All around you are rocky hills and directly opposite you is a waterfall, dropping water from above. 
+    To your left, is a barely visible path leading to a rickety wooden bridge. You adjust the sword on your hip, 
+    and as you are considering what to do, you see a brief, flash of light coming from the waterfall.
+    
+    Do you cross the bridge, or look closer at the waterfall?         
 
-            Type your choice: Bridge or Cavern?
+            Type your choice: Bridge or Waterfall?
 
             """)
     time.sleep(2)
@@ -126,14 +129,17 @@ def scene4():
     while (ans == 'incorrect'):
         if (c1.upper() == "BRIDGE"):
             print(
-                """\nBridge...""")
+                """\nYou are halfway across the bridge when suddenly the rotten boards beneath your feet give way.
+                With no time to react, you plummet 30 feet and crack your head on a rock. You die.""")
             time.sleep(2)
             print(
                 """\n""")
             ans = 'correct'
             pick = "True"
-        elif (c1.upper() == 'CAVERN'):
-            print("""\nCavern...""")
+        elif (c1.upper() == 'WATERFALL'):
+            print("""\nOn closer inspection of the waterfall, you see that there is a cavern behind it. After 
+            another flash of light hits your eyes, you decide to investigate, walking deeper into the dark, 
+            moving slowly...""")
             ans = 'correct'
             pick = "False"
         else:
@@ -143,6 +149,73 @@ def scene4():
     scene5()
 
 
+def scene5():
+    import time
+    print("""
+            The cavern slopes steeply down further and further into the earth...suddenly, 
+            you lose your footing and fall. You slide down the sloping cavern, gaining speed. 
+            After what seems like an eternity you burst forth into an open area.
+            You're immediately aware of noises of battle, and lift up your head to see a woman 
+            with a staff in furious combat with a huge wyvern. At her feet lies the unconscious form of a man, 
+            a hunting bow resting helpless in his hand.""")
+    time.sleep(2)
+    print("""
+            Lightning flashes from her staff, and the wyvern roars in pain. It raises itself onto its haunches, 
+            preparing to strike. The woman looks exhausted, and you know she won't survive much longer. 
+            Behind her, you see an opening leading back to the surface.
+            
+            Do you Flee to the opening, or Fight with the adventurers?
+
+            Type your choice: Flee or Fight?
+
+            """)
+    time.sleep(2)
+    c1 = input()
+    ans = 'incorrect'
+    while (ans == 'incorrect'):
+        if (c1.upper() == "FIGHT"):
+            print(
+                """\nThe adventurers need your help, and you never leave people in need. 
+                You jump to your feet, and draw your sword, charging the wyvern.""")
+            time.sleep(2)
+            print(
+                """\nReaching the wyvern just in time you leap and slash down with your sword 
+                with all the might in your body. At the same time, woman casts a spell of shielding, 
+                protecting her from the bite of the giant wyvern.""")
+            time.sleep(2)
+            print(
+                """\nYour sword-strike lands true, severing the head of the wyvern from its body. 
+                As the wyvern lies bleeding, you turn to see the woman glowing, holding the hunter in her arms. 
+                After many moments, the hunter opens his eyes, and the woman cries a sigh of relief.""")
+            time.sleep(2)
+            print("""\nThe woman turns to you with tears of gratitude in her eyes. She tells you that she 
+            and her brother had tracked the wyvern for years after it murdered their father years before. 
+            You just helped them complete their quest. Raising her staff she casts a spell, opening a portal 
+            to the city.
+            
+            You're free of the dark forest!""")
+            time.sleep(2)
+            print("""\n
+            Motioning to the lair behind the dead body of the wyvern, she tells you there is a gold chest, 
+            full of gems and coins. You walk over and pick it up.
+            
+            You're rich beyond your wildest dreams!
+            
+            Waving farewell to the woman, you step into the portal, ready to live a life of luxury and rest.
+            """)
+            ans = 'correct'
+            pick = "True"
+        elif (c1.upper() == 'FLEE'):
+            print("""\nHeart pounding in your chest you scramble to your feet and sprint to the opening - 
+            This isn't your fight! Unfortunately, you've distracted the wyvern which chases you with inhuman speed.
+            As you turn to look over your shoulder in terror, the last thing you see are razor-sharp, bloody teeth. """)
+            ans = 'correct'
+            pick = "False"
+        else:
+            print("Wrong Input! Enter Flee or Fight")
+            c1 = input()
+    time.sleep(2)
+    scene6()
 
 scene1()
 
