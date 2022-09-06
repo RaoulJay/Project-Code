@@ -216,7 +216,5 @@ def scene5():
             print("Wrong Input! Enter Flee or Fight")
             c1 = input()
     time.sleep(2)
-    scene6()
-
 scene1()
 
