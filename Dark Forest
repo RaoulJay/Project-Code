@@ -1,8 +1,6 @@
-print("\n\n")
-print("=================================The Dark Forest=================================")
-
 def scene1():
     import time
+    print("=================================The Dark Forest=================================")
     print("""        
 
         You wake up on the side of an old road in a dark forest...You have no memory of how you got here.
@@ -17,9 +15,10 @@ def scene1():
     while (ans == 'incorrect'):
         if (c1.upper() == "GREET"):
             print(
-                "\n The two strangers are two tall wiry humanoids clad in tattered leather armour. Hobgoblins! "
-                "You draw your sword to attack, but unfortunately, you are too slow, and your head is cleaved in twain."
-                " You die. ")
+            """\nThe two strangers are two tall wiry humanoids clad in tattered leather armour. Hobgoblins!
+            You draw your sword to attack, but unfortunately, you are too slow, and your head is cleaved in twain."
+            You die. """)
+            scene1()
             ans = 'correct'
         elif (c1.upper() == "HIDE"):
             print("Two pairs of wiry legs shuffle past, and the voices fade into the distance. "
@@ -50,10 +49,13 @@ def scene2():
             time.sleep(2)
             print(
                 """\nThe sides of the hole are covered in slime...what is this? 
-                Suddenly you enter a large cavern, and in that cavern is a Giant Sting Wyrm! 
-                You disturbed its sleep and now it is mad. You turn to run, but slip on the slime-covered floor
+                Suddenly you enter a large cavern, and in that cavern is a Giant Sting Wyrm!""")
+            time.sleep(5)
+            print(
+                """\nYou disturbed its sleep and now it is mad. You turn to run, but slip on the slime-covered floor
                 ...you feel a sharp sting in the back of your head, 
                 and everything goes black. You never awake.""")
+            scene1()
             ans = 'correct'
             pick = "True"
         elif (c1.upper() == 'WALK'):
@@ -104,6 +106,7 @@ def scene3():
             then grab the next branch and pull...crack! The branch under your feet snaps and you tumble to the ground.
             You're ankle is broken, and through tears in your eyes you see the swarm overtake you...
             After hundreds of stabbing pins, you drift into unconsciousness, never to awake. """)
+            scene1()
             ans = 'correct'
             pick = "False"
         else:
@@ -131,9 +134,7 @@ def scene4():
             print(
                 """\nYou are halfway across the bridge when suddenly the rotten boards beneath your feet give way.
                 With no time to react, you plummet 30 feet and crack your head on a rock. You die.""")
-            time.sleep(2)
-            print(
-                """\n""")
+            scene1()
             ans = 'correct'
             pick = "True"
         elif (c1.upper() == 'WATERFALL'):
@@ -147,7 +148,6 @@ def scene4():
             c1 = input()
     time.sleep(2)
     scene5()
-
 
 def scene5():
     import time
@@ -217,4 +217,3 @@ def scene5():
             c1 = input()
     time.sleep(2)
 scene1()
-
