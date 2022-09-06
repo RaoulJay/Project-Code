@@ -89,11 +89,11 @@ def scene3():
                 """\nSprinting off the road you hear water rushing ahead of you. Without thinking you speed 
                 towards the sound. You burst free of the treeline and taking a deep breath, 
                 dive straight into a rushing river.""")
-            time.sleep(2)
+            time.sleep(5)
             print(
                 """\nYou hold your breath as long as you can while the river carries you away upstream. 
                 When you surface, the Killer Bees are gone, but now you're stuck in the river's current.""")
-            time.sleep(2)
+            time.sleep(5)
             print(
                 """\nFloating as best you can the river eventually slows and you find yourself in a small lake. 
                 You slosh to the shoreline and look around.""")
@@ -158,7 +158,7 @@ def scene5():
             You're immediately aware of noises of battle, and lift up your head to see a woman 
             with a staff in furious combat with a huge wyvern. At her feet lies the unconscious form of a man, 
             a hunting bow resting helpless in his hand.""")
-    time.sleep(2)
+    time.sleep(7)
     print("""
             Lightning flashes from her staff, and the wyvern roars in pain. It raises itself onto its haunches, 
             preparing to strike. The woman looks exhausted, and you know she won't survive much longer. 
@@ -177,24 +177,24 @@ def scene5():
             print(
                 """\nThe adventurers need your help, and you never leave people in need. 
                 You jump to your feet, and draw your sword, charging the wyvern.""")
-            time.sleep(2)
+            time.sleep(5)
             print(
                 """\nReaching the wyvern just in time you leap and slash down with your sword 
                 with all the might in your body. At the same time, woman casts a spell of shielding, 
                 protecting her from the bite of the giant wyvern.""")
-            time.sleep(2)
+            time.sleep(8)
             print(
                 """\nYour sword-strike lands true, severing the head of the wyvern from its body. 
                 As the wyvern lies bleeding, you turn to see the woman glowing, holding the hunter in her arms. 
                 After many moments, the hunter opens his eyes, and the woman cries a sigh of relief.""")
-            time.sleep(2)
+            time.sleep(8)
             print("""\nThe woman turns to you with tears of gratitude in her eyes. She tells you that she 
             and her brother had tracked the wyvern for years after it murdered their father years before. 
             You just helped them complete their quest. Raising her staff she casts a spell, opening a portal 
             to the city.
             
             You're free of the dark forest!""")
-            time.sleep(2)
+            time.sleep(8)
             print("""\n
             Motioning to the lair behind the dead body of the wyvern, she tells you there is a gold chest, 
             full of gems and coins. You walk over and pick it up.
@@ -203,6 +203,7 @@ def scene5():
             
             Waving farewell to the woman, you step into the portal, ready to live a life of luxury and rest.
             """)
+            print("=================================The End=================================")
             ans = 'correct'
             pick = "True"
         elif (c1.upper() == 'FLEE'):
