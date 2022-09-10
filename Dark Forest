@@ -209,7 +209,7 @@ def scene5():
             time.sleep(5)
             print(
                 """\nReaching the wyvern just in time you leap and slash down with your sword 
-                with all the might in your body. At the same time, woman casts a spell of shielding, 
+                with all the might in your body. At the same time, the woman casts a spell of shielding, 
                 protecting her from the bite of the giant wyvern.""")
             time.sleep(8)
             print(
@@ -233,12 +233,16 @@ def scene5():
             Waving farewell to the woman, you step into the portal, ready to live a life of luxury and rest.
             """)
             print("=================================The End=================================")
+            scene1()
             ans = 'correct'
             pick = "True"
         elif (c1.upper() == 'FLEE'):
             print("""\nHeart pounding in your chest you scramble to your feet and sprint to the opening - 
             This isn't your fight! Unfortunately, you've distracted the wyvern which chases you with inhuman speed.
-            As you turn to look over your shoulder in terror, the last thing you see are razor-sharp, bloody teeth. """)
+            As you turn to look over your shoulder in terror, the last thing you see are razor-sharp, bloody teeth. 
+            
+            You have died """)
+            scene1()
             ans = 'correct'
             pick = "False"
         else:
