@@ -14,11 +14,25 @@ def scene1():
     ans = 'incorrect'
     while (ans == 'incorrect'):
         if (c1.upper() == "GREET"):
-            print(
-            """\nThe two strangers are two tall wiry humanoids clad in tattered leather armour. Hobgoblins!
-            You draw your sword to attack, but unfortunately, you are too slow, and your head is cleaved in twain."
-            You die. """)
-            scene1()
+            print("""\n         
+            
+            The two strangers are two tall wiry humanoids clad in tattered leather armour. Hobgoblins!
+            
+            You choose to fight. 
+            
+            The dice determine your fate!""")
+            import random
+            die1 = random.randint(1, 6)
+            die2 = random.randint(1, 6)
+            print(die1, die2)
+            print(die1 + die2)
+            if (die1 + die2) == 7 or (die1 + die2) == 12 or (die1 + die2) == 5 or (die1 + die2) == 11 \
+                    or (die1 + die2) == 3 or (die1 + die2) == 1:
+                print("Your sword strikes true and your enemy falls dead at your feet, you are victorious!")
+                scene2()
+            else:
+                print("You slash the air wildly, missing your target. Your enemy strikes without mercy. You have died.")
+                scene1()
             ans = 'correct'
         elif (c1.upper() == "HIDE"):
             print("Two pairs of wiry legs shuffle past, and the voices fade into the distance. "
@@ -32,7 +46,7 @@ def scene1():
 def scene2():
     import time
     print("""
-            You soon come across a large hole by the side of the road. 
+            Continuing along the path soon come across a large hole by the side of the road. 
             Peering in, you see it slopes down into the earth. 
             Do you investigate the hole, or walk on down the road?
 
@@ -52,10 +66,25 @@ def scene2():
                 Suddenly you enter a large cavern, and in that cavern is a Giant Sting Wyrm!""")
             time.sleep(5)
             print(
-                """\nYou disturbed its sleep and now it is mad. You turn to run, but slip on the slime-covered floor
-                ...you feel a sharp sting in the back of your head, 
-                and everything goes black. You never awake.""")
-            scene1()
+                """\n
+                
+            You choose to fight.
+            
+            The dice determine your fate!
+            
+            """)
+            import random
+            die1 = random.randint(1, 6)
+            die2 = random.randint(1, 6)
+            print(die1, die2)
+            print(die1 + die2)
+            if (die1 + die2) == 7 or (die1 + die2) == 12 or (die1 + die2) == 5 or (die1 + die2) == 11 \
+                                or (die1 + die2) == 3 or (die1 + die2) == 1:
+                print("Your sword strikes true and your enemy falls dead at your feet, you are victorious!")
+                scene5()
+            else:
+                print("You slash the air wildly, missing your target. Your enemy strikes without mercy. You have died.")
+                scene1()
             ans = 'correct'
             pick = "True"
         elif (c1.upper() == 'WALK'):
